@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#intro {
+        display: none; /*初始不显示*/
+        position: absolute; /*使图片脱离流*/
+        left: 120px; /*在这里调介绍位置*/
+        top: 15px;
+        font-size: 12px; /*字体大小*/
+        font-family: 宋体;
+}
+.button:hover #intro {
+    display: block; /*当鼠标悬停时，显示介绍 */
+}
+.button1 {width: 250px;}
+.button2 {width: 50%;}
+.button3 {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+/*设置介绍属性*/
+
+</style>
+</head>
+<body>
+
+<button class="button button1">250px</button><br>
+<button class="button button2">50%</button><br>
+<button class="button button3">100%</button>
+
+</body>
+</html>

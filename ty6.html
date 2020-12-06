@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<title>我的第一个 HTML 页面</title>
+</head>
+
+<body>
+    <input type="button" value="点击打赏" onclick="show();"
+    style="width: 150px; /* 宽度 */ 
+     height: 30px; /* 高度 */ 
+     border-width: 0px; /* 边框宽度 */ 
+     border-radius: 3px; /* 边框半径 */ 
+     background:#ffffff; /* 背景颜色 */ 
+     cursor: pointer; /* 鼠标移入按钮范围时出现手势 */ 
+     outline: none; /* 不显示轮廓线 */ 
+     font-family: Microsoft YaHei; /* 设置字体 */ 
+     color: rgb(0, 0, 0); /* 字体颜色 */
+     font-size: 17px; /* 字体大小 */" >
+    <div id="img" style="display:none"><img 
+    src="http://imgcache.qq.com/music/photo/singer/9/singerpic_109_0.jpg"></img>
+    </div>
+    
+    <script>
+    var img=document.getElementById('img');
+    function show(){
+    if(img.style.display=='none'){
+    img.style.display='';
+    }else{
+    img.style.display='none';
+    }
+    }
+    </script>
+</body>
+
+</html>
+
+

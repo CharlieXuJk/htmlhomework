@@ -1,0 +1,155 @@
+<html>
+
+    <head>
+    <title>点击文字显示图片</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+    
+    ul { /*用一个边框把列表框起来*/
+        width: 400px;
+        height: 600px;
+        border-style: solid;
+        border-color: #ffffff;
+        border-style: solid;
+    }
+    li {
+        list-style-type: none; /*去除列表符号*/
+        position: relative; /*配合子标签使用*/
+    }  
+    * { /*使所有的内容都紧靠在一起*/
+        margin: 0px;
+        padding: 0px;
+    }
+    .button {  /*没用到*/
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        display: block; /*图片保持显示状态*/
+    }    
+    /*光标移上去能够变色*/
+    li:HOVER {
+        background-color: #FFC1E0;
+    }
+    li:ACTIVE {
+        background-color: #ff0000;
+    }
+    
+    /*设置介绍属性*/
+    #intro {
+        display: none; /*初始不显示*/
+        position: absolute; /*跟随li*/
+        left: 120px;
+        top: 15px;
+        font-size: 12px; /*字体大小*/
+        font-family: 宋体;
+    }
+    #intro img {
+        display: block; /*一直显示*/
+    }
+    li:HOVER #intro {
+        display: block; /*当鼠标悬停时，显示介绍 */
+    }
+    </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <div id="div_01" onclick="show1();">格兰芬多</div>
+                <div id="intro">
+                    勇敢的格兰芬多，来自荒芜的沼泽
+                </div>
+            </li>
+            <li>
+                <div id="div_01" onclick="show2();">斯莱特林</div>
+                <div id="intro">
+                    渴望权力的斯莱特林最喜欢那些有野心的少年
+                </div>
+            </li>
+            <li>
+                <div id="div_01" onclick="show3();">赫奇帕奇</div>
+                <div id="intro">
+                    那里的人正直忠诚，赫奇帕奇的学子们坚忍诚实，不畏惧艰辛的劳动
+                </div>
+            </li>
+            <li>
+                <div id="div_01" onclick="show4()">拉文克劳</div>
+                <div id="intro">
+                    我们不会反感另类的人
+                </div>
+    
+            </li>
+        </li>
+    
+        </ul>
+        <div id="img1" style="display:none">
+            <img src="./gri.jpg"></img>
+        </div>
+        <div id="img2" style="display:none">
+            <img src="./sly.jpg"></img>
+        </div>
+        <div id="img3" style="display:none">
+            <img src="./huf.jpg"></img>
+        </div>
+        <div id="img4" style="display:none">
+            <img src="./rav.jpg"></img>
+        </div>
+        <script>
+            var img1=document.getElementById('img1');
+            var img2=document.getElementById('img2');
+            var img3=document.getElementById('img3');
+            var img4=document.getElementById('img4');
+            function show1(){
+            if(img1.style.display=='none'){
+                img2.style.display='none';
+                img3.style.display='none';
+                img4.style.display='none';
+                img1.style.display='';
+            }else{
+                img1.style.display='none';
+            }
+            }
+            function show2(){
+            if(img2.style.display=='none'){
+                img1.style.display='none';
+                img3.style.display='none';
+                img4.style.display='none';
+                img2.style.display='';
+            }else{
+                img2.style.display='none';
+            }
+            }
+            function show3(){
+            if(img3.style.display=='none'){
+                img1.style.display='none';
+                img2.style.display='none';
+                img4.style.display='none';
+                img3.style.display='';
+            }else{
+                img3.style.display='none';
+            }
+            }
+            function show4(){
+            if(img4.style.display=='none'){
+                img1.style.display='none';
+                img2.style.display='none';
+                img3.style.display='none';
+                img4.style.display='';
+            }else{
+                img4.style.display='none';
+            }
+            }
+        </script>
+    
+    </body>
+    
+    </html>
+    
